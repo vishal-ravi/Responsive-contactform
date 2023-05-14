@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <title>Responsive Contact Us Form </title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Fontawesome CDN Link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <div class="container">
+    <div class="content">
+      <div class="left-side">
+        <div class="address details">
+          <i class="fas fa-map-marker-alt"></i>
+          <div class="topic">Address</div>
+          <div class="text-one">Mangalore, NH16</div>
+          <div class="text-two">Karnataka</div>
+        </div>
+        <div class="phone details">
+          <i class="fas fa-phone-alt"></i>
+          <div class="topic">Phone</div>
+          <div class="text-one">+91 994792 xxxx</div>
+          <div class="text-two">+91 949562 xxxx</div>
+        </div>
+        <div class="email details">
+          <i class="fas fa-envelope"></i>
+          <div class="topic">Email</div>
+          <div class="text-one">test@gmail.com</div>
+          <div class="text-two">info.test@gmail.com</div>
+        </div>
+      </div>
+      <div class="right-side">
+        <div class="topic-text">Send us a message</div>
+        <p style="text-align:justify;">Any types of queries, you can send me a message from here.</p>
+        <form onsubmit="return validateForm()">
+          <div class="input-box">
+            <input type="text" id="name" placeholder="Enter your name" required>
+          </div>
+          <div class="input-box">
+            <input type="email" id="email" placeholder="Enter your email" required>
+          </div>
+          <div class="input-box message-box">
+            <textarea id="message" placeholder="Enter your message" required></textarea>
+          </div>
+          <div class="button">
+            <input type="submit" value="Send Now">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script>
+    function validateForm() {
+      var name = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+      var message = document.getElementById("message").value;
+
+      if (name.trim() === "") {
+        alert("Please enter your name.");
+        return false;
+      }
+
+      if (email.trim() === "") {
+        alert("Please enter your email.");
+        return false;
+      }
+
+      if (message.trim() === "") {
+        alert("Please enter your message.");
+        return false;
+      }
+    }
+  </script>
+</body>
+</html>
